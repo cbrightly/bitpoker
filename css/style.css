@@ -1,0 +1,331 @@
+@charset "utf-8";
+@import url('reset.css');
+
+/*____________Main Style and Containers______________*/
+
+body{background:#333f35; font:normal bold 15px "Trebuchet MS"; color:#bcc09a}
+
+a{text-decoration:none; color:white}
+
+ul{list-style:none}
+
+#wrapper{
+	position:relative;
+	width:1000px;  /*860*/
+	height:700px; /*600->630*/
+	margin:0px auto
+}
+
+/*____________Game Table______________________*/
+#table {
+	position:relative;
+	float:left;
+	width:1000px;
+	height:700px;
+	background:url(../images/pokertable.png)
+}
+
+	#table #msg{
+		position:absolute;
+		left:250px;
+		top:260px;
+		width:360px;
+		background:#bcc09a;
+		border:3px double #333f35;
+		text-align:center;
+		padding:5px 0;
+		font-size:22px;
+		color:#333f35;
+		display:none;
+		z-index:9999
+	}
+	
+	#table #p1msg{
+		position:absolute;
+		left:250px;
+		top:430px;
+		width:160px;
+		background:#bcc09a;
+		border:3px double #333f35;
+		text-align:center;
+		padding:5px 0;
+		font-size:22px;
+		color:#333f35;
+		display:none;
+		z-index:9999
+	}
+	
+	#table #gameid{
+		position:absolute;
+		top:10px;
+		left:10px;
+		font-size:12px;
+		color:#C18D53;
+		z-index:4
+	}
+
+	
+/*____________Bets and Money__________________*/	
+
+	.seattext1 {
+		position:absolute;
+		width:155px;
+		bottom:20px;
+		left:0px;
+		line-height:20px;
+		color:#ffffff;
+		text-align:center;
+	}
+
+	.seattext2 {
+                position:absolute;
+                width:155px;
+                bottom:0px;
+		left:0px;
+                line-height:20px;
+                color:#ffffff;
+                text-align:center;
+        }
+
+	.seatcards {
+		position:absolute;
+		height:90px;
+		width:155px;
+		top:0px;
+		left:0px;
+	}
+	.seatcards .cardM{
+		position:absolute;
+		height:90px;
+	}
+
+	.seatbet {
+		position:absolute;
+		width:80px;
+		height:20px;
+		line-height:20px;
+		color:#ffffff;
+	}
+
+	.seatbutton {
+		height:20px;
+		width:20px;
+		position:absolute;
+	}
+	.seatbutton img{
+		height:20px;
+	}
+
+	.seat {
+		position:absolute;
+		width:155px;
+		height:150px;
+		background:url(../images/seatlabel.png) no-repeat;
+		/*background:#000000;*/
+	}
+
+	#table #seat1{  left:420px;top:10px;background-position:0px 90px; }
+        #table #seat2{  left:629px;top:10px;background-position:0px 90px; }
+        #table #seat3{  left:785px;top:135px;height:130px;width:205px;background-position:50px 90px;}
+        #table #seat4{  left:785px;top:335px;height:130px;width:205px;background-position:50px 90px;}
+        #table #seat5{  left:629px;top:410px;background-position:0px 110px;}
+        #table #seat6{  left:420px;top:410px;background-position:0px 110px;}
+        #table #seat7{  left:210px;top:410px;background-position:0px 110px;}
+        #table #seat8{  left:5px; top:335px;height:130px;width:205px;background-position:0px 90px;}
+        #table #seat9{  left:5px; top:135px;height:130px;width:205px;background-position:0px 90px;}
+	#table #seat10{ left:210px;top:10px;background-position:0px 90px; }
+
+	#seat1 .seattext1{ bottom:40px; }
+	#seat1 .seattext2{ bottom:20px; }
+	#seat2 .seattext1{ bottom:40px; }
+	#seat2 .seattext2{ bottom:20px; }
+	#seat3 .seattext1{ left:80px; }
+	#seat3 .seattext2{ left:80px; }
+	#seat4 .seattext1{ left:80px; }
+	#seat4 .seattext2{ left:80px; }
+	#seat10 .seattext1{ bottom:40px; }
+	#seat10 .seattext2{ bottom:20px; }
+
+	#seat3 .seatcards{ width:125px;left:80px; }
+	#seat4 .seatcards{ width:125px;left:80px; } 	
+	#seat5 .seatcards{ top:20px;}
+	#seat6 .seatcards{ top:20px;}
+	#seat7 .seatcards{ top:20px;}
+
+
+	#seat1 .seatbet{ bottom:0px;left:0px;text-align:right; }
+	#seat2 .seatbet{ bottom:0px;left:0px;text-align:right; }
+	#seat3 .seatbet{ bottom:40px;left:0px;text-align:left; }
+	#seat4 .seatbet{ top:0px;left:0px;text-align:center; }
+	#seat5 .seatbet{ top:0px;left:0px;text-align:right; }
+	#seat6 .seatbet{ top:0px;left:0px;text-align:right; }
+	#seat7 .seatbet{ top:0px;left:0px;text-align:right; }
+	#seat8 .seatbet{ top:0px;right:0px;text-align:right; }
+	#seat9 .seatbet{ bottom:40px;right:0px;text-align:right; }
+	#seat10 .seatbet{ bottom:0px;left:0px;text-align:right; }
+
+        #seat1 .seatbutton{ bottom:0px;left:100px; }
+        #seat2 .seatbutton{ bottom:0px;left:100px; }
+        #seat3 .seatbutton{ bottom:60px;left:10px; }
+        #seat4 .seatbutton{ top:20px;left:40px; }
+        #seat5 .seatbutton{ top:0px;left:100px; }
+        #seat6 .seatbutton{ top:0px;left:100px; }
+        #seat7 .seatbutton{ top:0px;left:100px; }
+        #seat8 .seatbutton{ top:20px;right:30px; }
+        #seat9 .seatbutton{ bottom:60px;right:10px; }
+        #seat10 .seatbutton{ bottom:0px;left:100px; }
+
+
+	#table #board{
+		position:absolute;
+		height:120px;
+		width:490px;
+		top:230px;
+		left:255px;
+	}
+
+	#board .cardM {
+		height:120px;
+		position:absolute;
+	}
+
+/*____________Game Control______________*/			
+	
+	#table #betbox{
+		position:absolute;
+		width:540px;
+		height:120px;
+		left:450px;
+		top:570px;
+	}
+
+	#betbox div{
+		cursor:pointer;
+		text-align:center;
+		font-size:18px;
+		line-height:70px;
+		color:#000000;
+		float:left;
+                width:173px;
+		height:70px;
+		bottom:0px;
+		position:absolute;
+	}
+
+	#betbox #fold{ background:url(../images/redoff.png) no-repeat; left:1px; }
+	#betbox #call{ background:url(../images/yellowoff.png) no-repeat; left:184px; }
+	#betbox #raise{background:url(../images/greenoff.png) no-repeat; left:367px; }
+	#betbox #fold:hover{background:url(../images/redon.png) no-repeat;}
+	#betbox #call:hover{background:url(../images/yellowon.png) no-repeat;}
+	#betbox #raise:hover{background:url(../images/greenon.png) no-repeat;}
+
+
+	#table #chatbox{
+		position:absolute;
+		width:430px;
+		height:120px;
+		left:10px;
+		top:570px;
+	}
+
+	#chatbox #chat{
+		position:absolute;
+		width:424px;
+		height:80px;
+		left:0px;
+		top:0px;
+		border:3px solid black;
+		background-color:#cccccc;
+		color:#000000;
+		line-height:16px;
+		resize:none;
+		
+	}
+
+	#chatbox #chattype{
+		position:absolute;
+		width:430px;
+		height:20px;
+		left:0px;
+		bottom:0px;
+	}
+
+	
+		#control div{
+			float:left;
+			width:61px;
+			height:34px;
+			margin:10px 0 0 135px;
+			padding-top:3px;
+			text-align:center;
+			font-size:18px;
+			background:url(../images/control.png) no-repeat;
+			display:none;
+			cursor:pointer
+		}
+			#control div:hover{color:white}
+			#control div:active{background:url(../images/controlOn.png) no-repeat}
+				#control #hit, #control #stay, #control #double, #control #split{margin-left:10px;margin-right:0px;}
+				/*#control #double{font-size:12px}*/
+				/*#conrrol #hit, #conrrol #stay, #conrrol #double, #conrrol #split, #conrrol #deal{position:relative;margin:auto auto}*/
+
+
+			
+
+#checktable
+{
+  margin-left:auto;
+  margin-right:auto;
+  /*color: #000000;*/
+  border-width: 0px;
+        border-spacing: 3px;
+  /*      border-style: groove;*/
+  /*      border-color: red;*/
+        border-collapse: separate;
+}
+
+#checktable td, th
+{
+  border-collapse:collapse;
+  border-width:1px;
+  /*border-color: Black;
+  border-style: solid;*/
+}
+
+
+/*____________Game Field____________________*/		
+
+	#table #gameField{
+		position:relative;
+		float:left;
+		width:1000px;
+		height:700px;
+		/*right:60px;*/
+		/*background:url(../images/shoe.png) right top no-repeat*/
+	}
+	
+		#gameField .cardM{
+			position:absolute; 
+			top:0px; 
+			left:0px;
+			/*right:100px; */
+			display:none;
+			z-index:200
+		}
+		
+		.curValue{
+			position:absolute;
+			left:300px;
+			top:20px;
+			font-size:22px;
+			color:#C18D53;
+			z-index:4
+		}
+		
+			.curValue.player1{top:400px}
+			.curValue.player2{top:370px;left:60px}
+			.curValue.player3{top:440px;left:500px}
+
+	
+/*____________Footer_______________________*/
+footer{position:relative; margin-top:250px; width:100%; text-align:center}
